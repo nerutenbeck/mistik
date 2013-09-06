@@ -11,8 +11,9 @@ library(lsmeans)
 library(car)
 library(plyr)
 library(reshape2)
-library(ggplot2)
 library(xtable)
+library(ggplot2)
+library(pander)
 
 source('mistik_load.R') # Bring in cleaned mistik objects
 
@@ -22,6 +23,11 @@ source('mistik_load.R') # Bring in cleaned mistik objects
 
 ### Leaf Area ###
 
+rplot<-function(model){
+  plot(resid(model)~fitted(model),pch=20,cex=0.8)
+  abline(0,0,lty=4)
+}
+
 la.mer<-lmer(log(sla)~species*gappos+(1|vegtrt),data=LA,REML=T)
 
 rplot(la.mer)
@@ -30,6 +36,16 @@ plot(log(LA$sla)~fitted(la.mer));abline(0,1)
 
 la.aov<-Anova(la.mer,type=2,test.statistic='F')
 la.aov
+
+row.names(la.aov)<-c('S','G','S*G')
+
+print(xtable(la.aov,
+             caption='Results from Analysis of Deviance on differences in 
+leaf area per unit wet weight for species and gap position. 
+The standard deviation of the modeled random effect for transect was 6.0441, 
+and the standard deviation of residual error was 21.6106'),type='html')
+      
+
 
 la.lsm<-lsmeans(la.mer,specs='pairwise~species*gappos')
 
@@ -49,8 +65,7 @@ la.plot<-ggplot(ldply(la.lsm[1])[-1],
        panel.grid.minor=element_blank(),
        panel.border=element_blank(),
        panel.background=element_blank())
-
-
+la.plot
 
 ### Photosynthesis ###
 
@@ -64,6 +79,7 @@ plot(sqrt(mistik$photo)~fitted(photo.mer));abline(0,1)
 
 photo.aov<-Anova(photo.mer,type=2,test.statistic='F')
 photo.aov
+row.names(photo.aov)<-c('L','S','G','V','L*S','L*G','S*G','L*V','S*V','G*V','L*S*G','L*S*V','L*G*V','S*G*V','L*S*G*V')
 
 photo.lsm<-lsmeans(photo.mer,specs='pairwise~light*species*gappos|light:vegtrt:species')
 
@@ -84,23 +100,22 @@ photo.plot<-ggplot(ldply(photo.lsm[1])[-1],aes(x=gappos,y=I(lsmean^2),
         panel.border=element_rect(color='black'),
         panel.background=element_blank())
 photo.plot
-
-photo.plot2<-ggplot(ldply(photo.lsm[1])[-1],aes(x=gappos,y=I(lsmean^2),
-                                               ymin=ifelse(I((lower.CL)^2)>0,I((lower.CL)^2),0),
-                                               ymax=I((upper.CL)^2),
-                                               fill=species))+
-  geom_bar(stat='identity',position='dodge')+
-  geom_errorbar(width=0.4,position=position_dodge(width=0.9))+
-  facet_grid(.+light~vegtrt)+scale_fill_grey()+
-  xlab("Gap Position")+ylim(0,40)+
-  ylab(expression(" A ("*mu*"mol "*CO[2]*" "*m^-2*" "*s^-1*")"))+
-  theme_bw()+
-  theme(axis.line=element_line(color='black'),
-        panel.grid.major=element_blank(),
-        panel.grid.minor=element_blank(),
-        panel.border=element_rect(color='black'),
-        panel.background=element_blank())
-photo.plot2
+# photo.plot2<-ggplot(ldply(photo.lsm[1])[-1],aes(x=gappos,y=I(lsmean^2),
+#                                                ymin=ifelse(I((lower.CL)^2)>0,I((lower.CL)^2),0),
+#                                                ymax=I((upper.CL)^2),
+#                                                fill=species))+
+#   geom_bar(stat='identity',position='dodge')+
+#   geom_errorbar(width=0.4,position=position_dodge(width=0.9))+
+#   facet_grid(.+light~vegtrt)+scale_fill_grey()+
+#   xlab("Gap Position")+ylim(0,40)+
+#   ylab(expression(" A ("*mu*"mol "*CO[2]*" "*m^-2*" "*s^-1*")"))+
+#   theme_bw()+
+#   theme(axis.line=element_line(color='black'),
+#         panel.grid.major=element_blank(),
+#         panel.grid.minor=element_blank(),
+#         panel.border=element_rect(color='black'),
+#         panel.background=element_blank())
+# photo.plot2
 
 
 ### Conductance ###
@@ -114,6 +129,7 @@ qplot(resid(cond.mer),binwidth=0.01)
 
 cond.aov<-Anova(cond.mer,type=2,test.statistic='F')
 cond.aov
+row.names(cond.aov)<-row.names(photo.aov)
 
 cond.lsm<-lsmeans(cond.mer,specs='pairwise~light*species*gappos|light:vegtrt:species')
 cond.lsm
@@ -135,7 +151,6 @@ cond.plot<-ggplot(ldply(cond.lsm[1])[-1],aes(x=gappos,y=I(lsmean^2),
         panel.background=element_blank())
 cond.plot
 
-
 ### Transpiration ###
 
 trmmol.mer<-lmer(sqrt(trmmol)~light*species*gappos*vegtrt+(1|block/transect/gappos/treenum),
@@ -148,6 +163,8 @@ plot(sqrt(mistik$trmmol)~fitted(trmmol.mer));abline(0,1)
 
 trmmol.aov<-Anova(trmmol.mer,type=2,test.statistic='F')
 trmmol.aov
+row.names(trmmol.aov)<-row.names(photo.aov)
+
 
 trmmol.mer2<-update(trmmol.mer,.~.-vegtrt-light:vegtrt-species:vegtrt-
                       gappos:vegtrt-light:species:vegtrt-light:gappos:vegtrt-
@@ -214,6 +231,9 @@ trmmol.plot
 
 ### PPI ###
 
+
+m1200<-mistik[mistik$PARi>1100,]
+m50<-mistik[mistik$PARi<60,]
 temp1<-ddply(m1200[,-c(3,5,37)],.(species,block,transect,vegtrt,gappos,treenum),
              summarize,photo1200=mean(photo))
 temp2<-ddply(m50[-c(3,5,37)],.(species,block,transect,vegtrt,gappos,treenum),
@@ -248,20 +268,18 @@ plot(logit(plastic$plast)~fitted(plast.mer));abline(0,1) # Fit looks pretty good
 plast.aov<-Anova(plast.mer,type=2,test.statistic='F')
 plast.aov # Nothing significant, do no further testing
 
+table2<-cbind(photo.aov,cond.aov,trmmol.aov)
+table2
+
 # Random effects table
 ran<-as.data.frame(rbind(sigma.hat(photo.mer)$sigma,
            sigma.hat(cond.mer)$sigma,
            sigma.hat(trmmol.mer)$sigma))[,c(5,4,3,2,1)]
-ran
+
 names(ran)<-c('Block','Transect','Plot','Tree','Residual')
 
 row.names(ran)<-c('Photosynthesis','Conductance','Transpiration')
-ran
-
-for(i in 1:length(ran)){
-  ran[i]<-as.numeric(ran[[i]]^2)
-}
-ran
+ran # These are still standard deviations, not variances
 
 # #######################
 # ### Light submodels ###

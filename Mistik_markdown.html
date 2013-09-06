@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>Influence of gap position and site preparation on gas exchange dynamics and leaf area of <em>Picea glauca</em> and <em>Populus tremuloides</em> seedlings in mixedwood stands</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+<!-- MathJax scripts -->
+<script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+</head>
+
+<body>
+<h1>Influence of gap position and site preparation on gas exchange dynamics and leaf area of <em>Picea glauca</em> and <em>Populus tremuloides</em> seedlings in mixedwood stands</h1>
+
+<h3>Nathan E. Rutenbeck<sup>1,</sup> Brent R. Frey<sup>2,</sup> Graeme P. Berlyn<sup>3,</sup> Oswald J. Schmitz<sup>3,</sup> Bruce C. Larson<sup>4,</sup> Mark S. Ashton<sup>3</sup></h3>
+
+<p><strong>1. University of Maine, School of Forest Resources, Orono, Maine</strong></p>
+
+<p><strong>2. Department of Forestry, Mississippi State University, MS</strong></p>
+
+<p><strong>3. Yale University, School of Forestry and Environmental Studies, New Haven, CT</strong></p>
+
+<p><strong>4. Faculty of Forestry, University of British Columbia Vancouver, BC, Canada</strong></p>
+
+<h2>Abstract</h2>
+
+<p>One challenge for managers of boreal and sub-boreal mixedwood stands is to successfully establish and maintain the competitive status of white spruce (<em>Picea glauca</em> (Moench) Voss in relation to aspen (<em>Populus tremuloides</em> Michx.) and other competitors following harvesting. Underplanting spruce within harvest gaps has been suggested as one potential strategy, but questions remain regarding  the kind of harvest gap environment most conducive to the growth of spruce in relation to aspen. We used linear mixed-effects models to test the effect of harvest gap position and Meri-crusher versus brush-saw vegetation treatment on leaf area per wet weight, leaf photosynthesis, stomatal conductance, and transpiration in low- and full-light conditions, and on photosynthetic plasticity. Overall aspen maintained higher leaf area per unit wet weight than spruce across the gap, but spruce leaf area was more sensitive to changes in gap position. Aspen also maintained higher photosynthesis and transpiration rates than spruce under both light conditions and in both vegetation treatments, but the magnitude of difference in gas exchange rates between the two species depended significantly on vegetation treatment and gap position for photosynthesis, and on gap position for transpiration. Plasticity of photosynthetic response to changes in light were not significantly different for both species, and did not vary significantly with experimental treatments.</p>
+
+<h2>Introduction</h2>
+
+<p>Throughout the North American boreal and sub-boreal forests a natural disturbance regime of relatively frequent catastrophic fires (Armstrong 1999) facilitates the occurrence of trembling aspen (<em>Populus tremuloides</em> Michx.) and white spruce (<em>Picea glauca</em> (Moench) Voss) in both single- and stratified mixed-species stands (Rowe 1972, MacLaughlan et al. 2010). On mixedwood sites of this region, aspen is an early-successional pioneer, dominating during stand initiation and stem exclusion phases of stand development (sensu Oliver and Larson 1996). Following fire events, aspen typically regenerates quickly through vigorous root suckering to form a dense, closed canopy within about five years (Frey et al. 2002, Bokalo et al. 2007). Initial colonization by aspen is then followed by a period of intense competition and self-thinning before maturity at around 60-80 years, at which point the aspen component of the stand begins to decline. White spruce can enter these stands via two principal pathways. Spruce can establish via initial floristics, colonizing immediately following disturbance alongside aspen or it can establish later in stand development with the formation of canopy gaps (Dix and Swan 1971, Rowe and Scotter 1973, DeLong 1991, Youngblood 1995, Lieffers et al. 2002). In either case, on mixedwood sites growth of the more shade-tolerant spruce typically lags behind that of the more intolerant aspen, with the spruce component occupying the lower strata beneath aspen for several decades until releasing disturbance events (Nienstadt and Zasada 1990, Peterson and Peterson 1992, Lieffers et al. 1996, Brais et al. 2004).</p>
+
+<p>Because of the economic value of white spruce, however, managers of these forests often seek to generate spruce volumes on a shorter time scale than the natural dynamics of mixedwood stands would ordinarily facilitate. Doing so has frequently meant converting these stands to intensively managed spruce plantations that rely on site preparation and chemical methods to control the establishment and competitive status of the white spruce crop trees in relation to hardwood competitors. While such intensive management practices are undeniably an integral component of the suite of forest land uses at the landscape level (Seymour and Hunter 1992), they are neither appropriate for all sites nor for achieving all management objectives. This is especially the case given that such intensive methods have been shown to have relatively high costs, variable rates of success, and can be subject to intense public disapproval (Navratil 1991, Lieffers and Beck 1994). Compared to intensive, single-species plantations, more extensively managed mixed spruce-aspen forests can also offer considerable benefits, including providing greater protection of biodiversity, (Hunter 1991, Burton et al. 1992), increased ecosystem resilience (sensu Holling 1973), potential increases in stand-level productivity (Man and Lieffers 1999, MacPherson et al. 2001), lower susceptibility to damage from insects and pests (Comeau 1996), and greater public acceptance due to reduced herbicide use and improved aesthetic appearance. </p>
+
+<p>These factors have led to considerable interest in the development of more extensive silvicultural systems to produce fully-stocked spruce-aspen mixtures that are still commercially productive within typical investment time-frames and financial constraints. Various strategies have been suggested to successfully manage these mixedwood stands, including shelterwood systems, strip clearcuts, and underplanting within two-stage selection variable retention harvesting systems (Lieffers et al. 1996, Kabzems 2001, Man and Lieffers 1999b, Comeau et al 2005). Just as in more intensively managed plantations, however, silvicultural success in mixedwood stands will depend on the ability of forest managers to reliably secure adequate spruce regeneration and ensure its competitive status with respect to aspen, particularly during the juvenile growth stage. Enrichment underplanting of white spruce beneath aspen or within canopy gaps has been suggested as feasible a way of compensating for the difficulties associated with securing natural regeneration. Even following successful establishment, however, the relatively slow growth rate of white spruce is often severely limited by competition from other woody plants and herbaceous vegetation, especially in the high-resource environments that typify post-fire sites and other open environments (Hogg and Lieffers 1991, Lieffers and Beck 1994, Cole et al 2003, Filipescu and Comeau 2007, Bokalo et al. 2007, Cortini et al 2012). </p>
+
+<p>The regeneration ecology of spruce in naturally developing mixedwood stands does suggest that a gap-based approach to management may ultimately prove successful in promoting the establishment and growth of underplanted spruce. It is well-known that a gradient in microclimatic conditions and resource availability exists across gaps in the northern hemisphere, with the northern edge experiencing more accentuated temperature and lower moisture in both the soil air than the southern edge (Canham 1995, Voicu and Comeau 2006). Given differences in spruce and aspen ecology that should result in niche partitioning across the gap environment, certain positions within harvest gaps should theoretically prove more conducive to the successful establishment and growth of white spruce than others. Microclimatic variability within gaps has indeed been associated with differential growth rates of white spruce seedlings (Milakovsky et al 2011). Some evidence suggests that compared to aspen spruce may trade off net assimilation in order to avoid water stress by more tightly controlling stomatal aperture in the high temperature, low moisture environments typical of exposed conditions (Marsden et al. 1996, Groot et al. 1997), but the drivers of such differences in observed growth rate and competitive status across the gap environment remain poorly understood. </p>
+
+<p>The objective of this study was to contribute to current understandings of the physiological mechanisms behind observed differences in growth and competitive dynamics between juvenile white spruce and trembling aspen across the gap environment and under different site preparation techniques. For white spruce and tembling aspen seedlings located within harvest gaps in transects prepared with either a brush saw or Meri-crusher treatment we measured leaf area per unit weight weight and took measurements of photosynthesis (A\( _{net} \)) and transpiration (E) rates at photosynthetic photon flux densities of 50 \( \mu mol \) m\( ^{-2} \) s\( ^{-1} \) and 1200 \( \mu mol \) m\( ^{-2} \) s\( ^{-1} \) in each of five gap positions - southern understory (SU), southern edge (SE), center &#40;C), northern edge (NE), and northern understory (NU). From photosynthesis and transpiration rates we also calculated an index value measuring plasticity of photosynthetic response to differences in the two light conditions (PPI). We then used linear mixed-effects models to test the effect of harvest gap position and Meri-crusher versus brush-saw vegetation treatment on leaf area per wet weight, photosynthetic plasticity index, and leaf photosynthesis, transpiration, water-use efficiency at low-light and full-light conditions.</p>
+
+<h2>Methods</h2>
+
+<h3>Field Methods</h3>
+
+<p>Additional information regarding site layout and experimental design can be found in Milakovsky et al. (2011). The area of study is in west-central Saskatchewan, Canada, near the community of Meadow Lake, on lands owned by the Cree First Nation and managed by Mistik Management Ltd. This region lies within the Boreal Plain Ecozone, a transition between prairie to the south and the Boreal Shield in the north of the province (MacLaughlan et al 2010). Soils in this region are classified as gray luvisols on sandy loam subsoil (Agriculture Canada 1992). The climate of the study area is continental, with mean annual precipitation of around 406 mm, and average temperatures ranging from a daily mean high of -13.7 C in January to 24.2 C in July (Environment Canada 1993). Forest vegetation includes mixed forests of predominantly white spruce and trembling aspen, blending with minor overstory components of balsam poplar, jack pine, and black spruce. </p>
+
+<p>In 1997, four experimental linear gaps (ELGs) were created within each of two experimental blocks in which a TIMCO feller-buncher removed all trees greater than two meters in height. Gaps measured 340 meters (E-W axis) by 80 meters (N-S axis) and were arranged north-south within the stand, with a 100 meter buffer of uncut forest between each gap. Within each ELG, nine transects were laid out to which unique combinations of three herbivory exclosure and three vegetation management treatments were applied. The vegetation management treatments included a Meri-Crusher treatment that destroyed all residual vegetation and harvesting slash, a release treatment in which residual vegetation was cut using a brush saw, and a control treatment in which no management was applied. The herbivory exclosure treatments were not experimental factors in this study, but are detailed in Milakovsky et al. (2011). </p>
+
+<p>Five transects were chosen from three of the ELGs, (three release treatments and two sprout treatments, without herbivory exclosure) in which to conduct gas exchange measurements. Within each transect five 4m wide ( N-S) gap positions were delimited: southern understory (SU: 20 meters from the southern edge of the ELG into the forest), southern edge (SE: the first four meters of opening at the southern side of the ELG), center (C: centered 40 meters from the N and S edges of the ELG), northern edge (NE: the first four meters of opening at the northern side of the ELG), and northern understory (NU: 20 meters from the northern edge of the ELG into the forest). </p>
+
+<p>Within each gap position, we established a single centered 4 x 8 meter plot, further subdivided into eight 2 x 2 meter subplots. Four out of eight 2 x 2 meter subplots at each gap position were randomly selected for spruce plantings, within which nine 4-month-old containerized white spruce seedlings were planted at 1 x 1 meter spacing during the first two weeks of June, 1996. Therefore for each gap position within an ELG a total of 36 seedlings (9 seedlings x 4 subplots) were planted. Planted spruce seedlings were of native provenance from the Mistik Management Nursery stock, averaging 15 cm in height at the time of planting. Aspen seedlings within these subplots were all naturally occurring. Gap positions and plots were laid out prior to harvesting of the openings, and harvesting machinery was confined to trails between gap positions so as to prevent soil compaction and damage to residual vegetation.</p>
+
+<p>Measurements were collected over three consecutive summers, from 1998-2000, with aspen measurements taken from July 2-7, 1998 and from July 25-30, 1999. Spruce measurements taken from July 25-30, 1999 and from June 21-28, 2000. Gas exchange measurements were taken using the Li-Cor (Lincoln, NE) LI-6400 Portable Photosynthesis System. Within each gap position in a given transect, net assimilation rate of CO~2~ (A), stomatal conductance to H~2~O (g~sw~), and transpiration rate (E) were measured twice for six randomly selected individuals at a high light level of 1200 \( \mu mol \) m\( ^{-2} \) s\( ^{-1} \) photosynthetic photon flux density (PPFD) and at a low light level of 50 \( \mu mol \) m\( ^{-2} \) s\( ^{-1} \) PPFD. During the 1998 field season, leaf area and wet weight of samples were recorded immediately following the collection of gas exchange measurements. Leaf area samples were collected within the same experimental block from six individuals in each of the five gap positions in two transects.</p>
+
+<h3>Data analysis</h3>
+
+<p>All data processing and analyses were conducted in RStudio version 0.97.336 (RStudio 2013) calling Rx64 version 3.0.1 (R Development Core Team 2013). Data visualization was accomplished using the ggplot2 (Wickham 2009), pander (Daroczi 2013), and knitr (Xie 2013) libraries. All mixed-effects models were fit using the lmer() function within the lme4 package (Bates et al. 2013).</p>
+
+<p>Because of imbalances in collection of leaf area data, measurements from the southern and northern understory positions were pooled prior to analysis. Differences in the ratio of leaf area to wet weight (LAW) for spruce and aspen in each of four gap positions were then tested within a mixed model framework with a random effect at the transect level.</p>
+
+<p>In analyzing gas exchange rates, the data were first standardized for leaf area and cleaned of errors by removing negative values and other implausible outliers. Photosynthetic plasticity index (PPI) was defined as \( \frac{A_1200-A_50}{A_1200} \). For A, g~sw~, and E, mixed-effects models were fit testing the effect of light level, species, gap position, site preparation and all interaction terms on each response variable, with random effects included for block, transect, plot, and individual to reflect the hierarchical experimental design structure. A PPI model with the same random effects structure was similarly fit testing the effects of species, gap position, site preparation, and all interaction effects. For all models, we examined plots of residuals versus fitted values, normal quantile-quantile plots, histograms of residuals, and observed versus predicted values in order to examine fit and verify assumptions. Following initial model fitting to untransformed data, A, g\( _sw \), and E were squareroot transformed, PPI was logit transformed, and models were re-fit in order to meet assumptions of homoscedasticity and normality of residual error.</p>
+
+<p>Significance (\( \alpha=0.05 \)) of fixed-effects for full models were tested using Type II Analysis of Deviance Wald F tests with the Kenward-Rogers adjustment to denominator degrees of freedom implemented using the car package (Fox and Weisberg 2011). Post-hoc pairwise comparisons of marginal means for all treatment levels of experimental fixed-effects were conducted using Tukey&#39;s Honestly Significant Differences tests as implemented by the lsmeans package (Lenth 2013).</p>
+
+<h2>Results</h2>
+
+<h3>Leaf Area</h3>
+
+<p>Analysis of deviance results for LAW are displayed in Table 1. Predictably, we found that aspen had higher LAW ratios than spruce in all gap positions, and that both species maintained their highest LAW ratios when in the understory. Within the harvest gap, however, spruce and aspen showed distinctly divergent patterns. Once out of the understory, LAW ratios did not vary significantly for aspen across any of the internal gap positions, while for spruce it declined steadily moving from the southern edge of the gap to the northern edge (Figure 1).</p>
+
+<h3>Gas Exchange</h3>
+
+<p>Analysis of deviance results for fixed effects in full gas exchange models are shown in Tables 2-4, and estimates of standard deviations of random effects of experimental design factors are displayed in Table 5. Based on parameter estimates from the full models, there appeared to be a high degree of interaction between experimental factors in all three gas exchange models. Significant four-way interactions between light, species, gap position, and vegetation treatment were indicated by the photosynthesis (\( p= \) 0.0054) and stomatal conductance (\( p= \) 0.0072) models. Likewise, results from the transpiration model indicated a significant (\( p<0.0001 \)) three-way interaction between light level, species, and gap position. In addition to being difficult to meaningfully interpret, however, the prima facie statistical significance of such high order interactions may at least in part be an artifact of fitting complex models to relatively noisy data, particularly at low light levels, and therefore not entirely demonstrative of strong physiological signals. Even with this caution in mind, however, estimates of gas exchange rates based on post-hoc comparisons of marginal means for fixed effects show some clear differences in patterns of species gas exchange rates in response to experimental factors.</p>
+
+<h4>Photosynthesis</h4>
+
+<p>Post hoc comparisons of spruce and aspen photosythesis rates by light level, gap position, and vegetation treatment are presented in Figure 1. At low light levels there were some differences across the experiment, but these differences did not demonstrate a clearly interpretable pattern. In low light levels both spruce and aspen appeared to be similarly limited, with rates in no gap position/vegetation treatment combination conclusively better than any other, and with neither species holding a clear advantage. By contrast, at full light aspen photosynthesis rates were both relatively constant and consistently higher than spruce, with the magnitude and significance of these differences between the two species varying based on site preparation treatment and gap position. </p>
+
+<p>In full light and in transects prepared with the brush saw treatment photosynthesis rates for aspen did not vary significantly by gap position, and were higher than spruce in all gap positions but the center. Spruce showed a more dynamic response, with photosynthesis rates significantly higher in the center than in surrounding gap positions, though with no detectable variation between the other gap positions. </p>
+
+<p>In transects prepared with the Meri-crusher treatment a wholly different pattern occured. Aspen photosynthesis rates were again higher than spruce under full light conditions in four of the five gap positions, but the location in which the two species did not vary significantly was instead the southern understory. Aspen photosynthesis rates were also variable rather than static from one gap position to another, with surprising differences between the center and northern edge gap positions, though no differences existed between the center and the southern edge, or the southern edge and the Because this variation is not easily interpretable physiologically, it should perhaps be treated as a statistical artifact rather than a definitive pattern.</p>
+
+<h4>Stomatal Conductance</h4>
+
+<p>Post hoc comparisons of spruce and aspen stomatal conductance by light level, gap position, and vegetation treatment are presented in Figure 2. Aspen stomatal conductance was higher than that of spruce in all gap positions, regardless of changes in vegetation treatment or light level. Neither species showed distinct differences in stomatal conductance under changing light conditions, but aspen also showed very little variation across either gap environment or between site treatments. </p>
+
+<p>By contrast spruce showed distinctly different patterns in stomatal conductance rates between site preparation treatments, showing a more dynamic response to changes in gap position in the brush saw than the Meri-crusher transects. In brush sawn transects spruce stomatal conductance displayed an increasing pattern from the southern understory, peaking in the center of the gap and falling to very low levels in the northern understory. In contradistinction to this pattern, spruce stomatal conductance in Meri-crusher transects was highest in the southern edge of the gap, and did not vary significantly between all other gap positions.</p>
+
+<h4>Transpiration</h4>
+
+<p>Post hoc comparisons of spruce and aspen transpiration by light level and gap position are presented in Figure 3. Because of the non-significance of differences in vegetation treatment and interactions with vegetation treatment in the transpiration model, these factors were excluded from post-hoc testing. </p>
+
+<p>Transpiration was higher for aspen than spruce across all gap positions and both light levels, did not vary significantly by gap position within a given light level, and only varied between light levels at the northern edge of the harvest gap. Light level also made little difference in spruce transpiration rates. Similarly to other gas exchange measures, however, spruce showed a more dynamic response to changing gap position than aspen, with peak transpiration rates at the southern edge and center of the gap, and lowest transpiration rates in the two understory positions. </p>
+
+<h2>Discussion</h2>
+
+<p>Determining what microenvironments may be most conducive to maintaining the competitve status of white spruce with respect to hardwood competitors such as aspen is crucial in designing silvicultural strategies for successfully managing boreal mixedwood forests. This study demonstrates fundamental differences between spruce and aspen in terms of leaf area and gas exchange rates in response to changing light conditions within different gap positions and subject to different site preparation treatments. Overall, spruce was more sensitiveThese differences in patterns of spruce and aspen response to gap environment and vegetation treatment reflect fundamental differences in life history and successional roles between the two species. The ability of aspen to display a great deal of leaf area per unit weight largely without regard to the microclimatic variability of the harvest gap is characteristic of an early-successional species that is extremely competitive in a high-light, low moisture environment. This is doubly the case when the aspen is of sprout origin, for which moisture is likely less limiting than for released individuals. By contrast, spruce is a relatively shade tolerant species whose successional status in natural stands relies on persistence beneath aspen, with slower growth but greater longevity. </p>
+
+<h2>Bibliography</h2>
+
+<h2>Appendix 1: Tables</h2>
+
+<hr/>
+
+<p>&nbsp;    F    Df   Df.res     Pr(&gt;F)</p>
+
+<hr/>
+
+<p><strong>S</strong>     658  1    95.2      1.6e-44</p>
+
+<p><strong>G</strong>     26.2 3    95.1     1.98e-12</p>
+
+<h2><strong>S*G</strong>   3.51 3    95.1       0.0182</h2>
+
+<p>Table: Analysis of Deviance results on differences in leaf area per unit wet weight for species and gap position. The standard deviation of the modeled random effect for transect was 6.0441 and the standard deviation of the residual error at the individual level was 21.6106</p>
+
+<table><thead>
+<tr>
+<th align="left">&nbsp;</th>
+<th align="left">F</th>
+<th align="left">Df</th>
+<th align="left">Df.res</th>
+<th align="right">Pr(&gt;F)</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left"><strong>L</strong></td>
+<td align="left">4677</td>
+<td align="left">1</td>
+<td align="left">590</td>
+<td align="right">1.11e-282</td>
+</tr>
+<tr>
+<td align="left"><strong>S</strong></td>
+<td align="left">724</td>
+<td align="left">1</td>
+<td align="left">187</td>
+<td align="right">2.69e-66</td>
+</tr>
+<tr>
+<td align="left"><strong>G</strong></td>
+<td align="left">0.203</td>
+<td align="left">4</td>
+<td align="left">10.3</td>
+<td align="right">0.931</td>
+</tr>
+<tr>
+<td align="left"><strong>V</strong></td>
+<td align="left">0.0157</td>
+<td align="left">1</td>
+<td align="left">1.49</td>
+<td align="right">0.915</td>
+</tr>
+<tr>
+<td align="left"><strong>L*S</strong></td>
+<td align="left">490</td>
+<td align="left">1</td>
+<td align="left">597</td>
+<td align="right">1.05e-79</td>
+</tr>
+<tr>
+<td align="left"><strong>L*G</strong></td>
+<td align="left">33.9</td>
+<td align="left">4</td>
+<td align="left">591</td>
+<td align="right">1.82e-25</td>
+</tr>
+<tr>
+<td align="left"><strong>S*G</strong></td>
+<td align="left">21</td>
+<td align="left">4</td>
+<td align="left">198</td>
+<td align="right">2.02e-14</td>
+</tr>
+<tr>
+<td align="left"><strong>L*V</strong></td>
+<td align="left">29.7</td>
+<td align="left">1</td>
+<td align="left">592</td>
+<td align="right">7.32e-08</td>
+</tr>
+<tr>
+<td align="left"><strong>S*V</strong></td>
+<td align="left">15.9</td>
+<td align="left">1</td>
+<td align="left">145</td>
+<td align="right">0.000105</td>
+</tr>
+<tr>
+<td align="left"><strong>G*V</strong></td>
+<td align="left">0.564</td>
+<td align="left">4</td>
+<td align="left">10.1</td>
+<td align="right">0.694</td>
+</tr>
+<tr>
+<td align="left"><strong>L*S*G</strong></td>
+<td align="left">2.98</td>
+<td align="left">4</td>
+<td align="left">598</td>
+<td align="right">0.0188</td>
+</tr>
+<tr>
+<td align="left"><strong>L*S*V</strong></td>
+<td align="left">23.2</td>
+<td align="left">1</td>
+<td align="left">605</td>
+<td align="right">1.86e-06</td>
+</tr>
+<tr>
+<td align="left"><strong>L*G*V</strong></td>
+<td align="left">8.99</td>
+<td align="left">4</td>
+<td align="left">594</td>
+<td align="right">4.71e-07</td>
+</tr>
+<tr>
+<td align="left"><strong>S*G*V</strong></td>
+<td align="left">2.96</td>
+<td align="left">4</td>
+<td align="left">82</td>
+<td align="right">0.0244</td>
+</tr>
+<tr>
+<td align="left"><strong>L*S*G*V</strong></td>
+<td align="left">3.71</td>
+<td align="left">4</td>
+<td align="left">607</td>
+<td align="right">0.00541</td>
+</tr>
+</tbody></table>
+
+<p>Table: Results from Analysis of Deviance on the effects of light level (L), species (S), gap position (G), vegetation treatment (V), and all interactions on photosythesis rate</p>
+
+<table><thead>
+<tr>
+<th align="left">&nbsp;</th>
+<th align="left">F</th>
+<th align="left">Df</th>
+<th align="left">Df.res</th>
+<th align="right">Pr(&gt;F)</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left"><strong>L</strong></td>
+<td align="left">11</td>
+<td align="left">1</td>
+<td align="left">565</td>
+<td align="right">0.000952</td>
+</tr>
+<tr>
+<td align="left"><strong>S</strong></td>
+<td align="left">339</td>
+<td align="left">1</td>
+<td align="left">180</td>
+<td align="right">2.79e-43</td>
+</tr>
+<tr>
+<td align="left"><strong>G</strong></td>
+<td align="left">1.37</td>
+<td align="left">4</td>
+<td align="left">9.33</td>
+<td align="right">0.316</td>
+</tr>
+<tr>
+<td align="left"><strong>V</strong></td>
+<td align="left">0.00203</td>
+<td align="left">1</td>
+<td align="left">1.56</td>
+<td align="right">0.969</td>
+</tr>
+<tr>
+<td align="left"><strong>L*S</strong></td>
+<td align="left">6.37</td>
+<td align="left">1</td>
+<td align="left">568</td>
+<td align="right">0.0119</td>
+</tr>
+<tr>
+<td align="left"><strong>L*G</strong></td>
+<td align="left">6.67</td>
+<td align="left">4</td>
+<td align="left">565</td>
+<td align="right">3.01e-05</td>
+</tr>
+<tr>
+<td align="left"><strong>S*G</strong></td>
+<td align="left">3.43</td>
+<td align="left">4</td>
+<td align="left">175</td>
+<td align="right">0.01</td>
+</tr>
+<tr>
+<td align="left"><strong>L*V</strong></td>
+<td align="left">1.7</td>
+<td align="left">1</td>
+<td align="left">566</td>
+<td align="right">0.193</td>
+</tr>
+<tr>
+<td align="left"><strong>S*V</strong></td>
+<td align="left">0.831</td>
+<td align="left">1</td>
+<td align="left">90.4</td>
+<td align="right">0.364</td>
+</tr>
+<tr>
+<td align="left"><strong>G*V</strong></td>
+<td align="left">2.35</td>
+<td align="left">4</td>
+<td align="left">9.1</td>
+<td align="right">0.132</td>
+</tr>
+<tr>
+<td align="left"><strong>L*S*G</strong></td>
+<td align="left">0.652</td>
+<td align="left">4</td>
+<td align="left">569</td>
+<td align="right">0.626</td>
+</tr>
+<tr>
+<td align="left"><strong>L*S*V</strong></td>
+<td align="left">0.135</td>
+<td align="left">1</td>
+<td align="left">572</td>
+<td align="right">0.713</td>
+</tr>
+<tr>
+<td align="left"><strong>L*G*V</strong></td>
+<td align="left">3.55</td>
+<td align="left">4</td>
+<td align="left">567</td>
+<td align="right">0.00709</td>
+</tr>
+<tr>
+<td align="left"><strong>S*G*V</strong></td>
+<td align="left">1.02</td>
+<td align="left">4</td>
+<td align="left">79.3</td>
+<td align="right">0.4</td>
+</tr>
+<tr>
+<td align="left"><strong>L*S*G*V</strong></td>
+<td align="left">3.55</td>
+<td align="left">4</td>
+<td align="left">572</td>
+<td align="right">0.00719</td>
+</tr>
+</tbody></table>
+
+<p>Table: Results from Analysis of Deviance on the effects of light level (L), species (S), gap position (G), vegetation treatment (V), and all interactions on stomatal conductance rates</p>
+
+<table><thead>
+<tr>
+<th align="left">&nbsp;</th>
+<th align="left">F</th>
+<th align="left">Df</th>
+<th align="left">Df.res</th>
+<th align="right">Pr(&gt;F)</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left"><strong>L</strong></td>
+<td align="left">71.5</td>
+<td align="left">1</td>
+<td align="left">565</td>
+<td align="right">2.42e-16</td>
+</tr>
+<tr>
+<td align="left"><strong>S</strong></td>
+<td align="left">385</td>
+<td align="left">1</td>
+<td align="left">189</td>
+<td align="right">1.84e-47</td>
+</tr>
+<tr>
+<td align="left"><strong>G</strong></td>
+<td align="left">0.522</td>
+<td align="left">4</td>
+<td align="left">9.93</td>
+<td align="right">0.722</td>
+</tr>
+<tr>
+<td align="left"><strong>V</strong></td>
+<td align="left">0.000224</td>
+<td align="left">1</td>
+<td align="left">1.81</td>
+<td align="right">0.99</td>
+</tr>
+<tr>
+<td align="left"><strong>L*S</strong></td>
+<td align="left">6.14</td>
+<td align="left">1</td>
+<td align="left">568</td>
+<td align="right">0.0135</td>
+</tr>
+<tr>
+<td align="left"><strong>L*G</strong></td>
+<td align="left">11.8</td>
+<td align="left">4</td>
+<td align="left">566</td>
+<td align="right">3.42e-09</td>
+</tr>
+<tr>
+<td align="left"><strong>S*G</strong></td>
+<td align="left">3.54</td>
+<td align="left">4</td>
+<td align="left">193</td>
+<td align="right">0.00812</td>
+</tr>
+<tr>
+<td align="left"><strong>L*V</strong></td>
+<td align="left">0.351</td>
+<td align="left">1</td>
+<td align="left">566</td>
+<td align="right">0.554</td>
+</tr>
+<tr>
+<td align="left"><strong>S*V</strong></td>
+<td align="left">0.105</td>
+<td align="left">1</td>
+<td align="left">168</td>
+<td align="right">0.747</td>
+</tr>
+<tr>
+<td align="left"><strong>G*V</strong></td>
+<td align="left">0.314</td>
+<td align="left">4</td>
+<td align="left">9.74</td>
+<td align="right">0.862</td>
+</tr>
+<tr>
+<td align="left"><strong>L*S*G</strong></td>
+<td align="left">3.49</td>
+<td align="left">4</td>
+<td align="left">569</td>
+<td align="right">0.00785</td>
+</tr>
+<tr>
+<td align="left"><strong>L*S*V</strong></td>
+<td align="left">0.847</td>
+<td align="left">1</td>
+<td align="left">572</td>
+<td align="right">0.358</td>
+</tr>
+<tr>
+<td align="left"><strong>L*G*V</strong></td>
+<td align="left">0.677</td>
+<td align="left">4</td>
+<td align="left">567</td>
+<td align="right">0.608</td>
+</tr>
+<tr>
+<td align="left"><strong>S*G*V</strong></td>
+<td align="left">1.07</td>
+<td align="left">4</td>
+<td align="left">77.4</td>
+<td align="right">0.378</td>
+</tr>
+<tr>
+<td align="left"><strong>L*S*G*V</strong></td>
+<td align="left">1.11</td>
+<td align="left">4</td>
+<td align="left">573</td>
+<td align="right">0.353</td>
+</tr>
+</tbody></table>
+
+<p>Table: Results from Analysis of Deviance on the effects of light level (L), species (S), gap position (G), vegetation treatment (V), and all interactions on transpiration rates</p>
+
+<table><thead>
+<tr>
+<th align="left">&nbsp;</th>
+<th align="left">Block</th>
+<th align="left">Transect</th>
+<th align="left">Plot</th>
+<th align="left">Tree</th>
+<th align="left">Residual</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left"><strong>Photosynthesis</strong></td>
+<td align="left">0.4133</td>
+<td align="left">0</td>
+<td align="left">0.3505</td>
+<td align="left">0.192</td>
+<td align="left">0.3621</td>
+</tr>
+<tr>
+<td align="left"><strong>Conductance</strong></td>
+<td align="left">0.007763</td>
+<td align="left">0.02554</td>
+<td align="left">0.05196</td>
+<td align="left">0.07564</td>
+<td align="left">0.05163</td>
+</tr>
+<tr>
+<td align="left"><strong>Transpiration</strong></td>
+<td align="left">3.018e-05</td>
+<td align="left">0.1312</td>
+<td align="left">0.2022</td>
+<td align="left">0.1995</td>
+<td align="left">0.1419</td>
+</tr>
+</tbody></table>
+
+<p>Table: Standard deviations of experimental random effects for each of the three gas exchange models</p>
+
+<h2>Appendix 2: Figures</h2>
+
+<p><img src="data:image/png;base64,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" alt="Leaf area per unit wet weight of white spruce and trembling aspen by gap position and vegetation treatment. Bar levels indicate marginal means and standard errors"/> </p>
+
+<p><img src="data:image/png;base64,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" alt="Photosynthesis rate of white spruce (PIGL) and trembling aspen (POTR) by light level (1200 or 50 mmol PPFD) and vegetation treatment (Brush Saw or Meri-Crusher) across the experimental linear gap. Gap positions: SU - southern understory; SE - southern edge; C - center; NE - northern edge; NU - northern understory. Bar levels indicate marginal means and standard errors"/> </p>
+
+<p><img src="data:image/png;base64,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" alt="Stomatal conductance rate of white spruce (PIGL) and trembling aspen (POTR) by light level (1200 or 50 mmol PPFD) and vegetation treatment (Brush Saw or Meri-Crusher) across the experimental linear gap. Gap positions: SU - southern understory; SE - southern edge; C - center; NE - northern edge; NU - northern understory. Bar levels indicate marginal means and standard errors"/> </p>
+
+<p><img src="data:image/png;base64,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" alt="Transpiration rate of white spruce (PIGL) and trembling aspen (POTR) by light level (1200 or 50 mmol PPFD) and vegetation treatment (Brush Saw or Meri-Crusher) across the experimental linear gap. Gap positions: SU - southern understory; SE - southern edge; C - center; NE - northern edge; NU - northern understory. Bar levels indicate marginal means and standard errors"/> </p>
+
+</body>
+
+</html>
+

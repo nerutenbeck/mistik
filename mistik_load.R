@@ -5,7 +5,7 @@
 rm(list=ls())
 
 library(ggplot2)
-
+library(car)
 
 ###################################################
 ### Define data objects and remove logging errors
