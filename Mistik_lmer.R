@@ -37,7 +37,7 @@ plot(log(LA$sla)~fitted(la.mer));abline(0,1)
 la.aov<-Anova(la.mer,type=2,test.statistic='F')
 la.aov
 
-row.names(la.aov)<-c('S','G','S*G')
+row.names(la.aov)<-c('S','G','S G')
 
 print(xtable(la.aov,
              caption='Results from Analysis of Deviance on differences in 
@@ -79,7 +79,7 @@ plot(sqrt(mistik$photo)~fitted(photo.mer));abline(0,1)
 
 photo.aov<-Anova(photo.mer,type=2,test.statistic='F')
 photo.aov
-row.names(photo.aov)<-c('L','S','G','V','L*S','L*G','S*G','L*V','S*V','G*V','L*S*G','L*S*V','L*G*V','S*G*V','L*S*G*V')
+row.names(photo.aov)<-c('L','S','G','V','L S','L G','S G','L V','S V','G V','L S G','L S V','L G V','S G V','L S G V')
 
 photo.lsm<-lsmeans(photo.mer,specs='pairwise~light*species*gappos|light:vegtrt:species')
 
